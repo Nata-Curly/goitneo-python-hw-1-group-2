@@ -1,5 +1,5 @@
 """module with functions for parsing commands and adding contacts"""
-from handlers import add_contact, parse_input
+from handlers import add_contact, parse_input, show_phone, change_contact
 
 
 def main():
@@ -19,6 +19,10 @@ def main():
             print(add_contact(args, contacts))
         elif command == "all":
             print(contacts)
+        elif command == "change":
+            print(change_contact(args, contacts))
+        elif command == "phone":
+            print(show_phone(args, contacts))
         else:
             print("Invalid command.")
 
